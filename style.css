@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+* {
+	box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Orbitron', 'Sans-serif';
+    color: black;
+}
+/* ==================================================== */
+/* main page container Declaration */
+/* ==================================================== */
+
+.hero{
+	background-image: url(images/background.png);
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+/* ==================================================== */
+/* pageContainer Declaration*/
+/* ===================================================== */
+
+#pageContainer {
+    width: 90%;
+    height: 90%;
+    background-color: rgb(255, 255, 255, 0.75);
+    border: 5px solid white;
+    box-shadow: 2px solid white;
+    border-radius: 30px;
+
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	transition: 0.25s;
+}
+
+/* ==================================================== */
+/* pageHeader declaration */
+/* ==================================================== */
+
+#pageHeader{
+    width: 90%;
+    height: 40%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    border-bottom: 2px solid white;
+    box-shadow: 2px solid black;
+}
+
+/* pageHeader- h1 declaration*/
+#pageHeader h1{
+    width: 100%;
+    height: 50%;
+    font-size: 60px;
+    align-self: center;
+}
+/* -------------game mode buttons------------------ */
+#onePlayerGame, #twoPlayerGame{
+    width: 20%;
+    height: 30%;
+    justify-content: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 20px;
+    align-content: space-between;
+    cursor: pointer;
+}
+
+#mainMenu{
+    width: 40%;
+    height: 30%;
+    justify-content: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* pageHeader - ul declaration */
+#pageHeader ul{
+    width: 50%;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+/* game rules list item declaration */
+#pageHeader ul :nth-child(1){
+    width: 50%;
+    height: 100%;
+    font-size: 30px;
+    list-style-type: none;
+    transform:translateY(-5%)
+}
+/* unordered list beneath  game rules declaration */
+#pageHeader ul :nth-child(2), :nth-child(3),:nth-child(4){
+    padding-bottom: 3px;
+    font-size: 15px;
+    width: 55%;
+
+}
+
+/* ================================================== */
+/* GameBoard Container- Declaration (to hold both gameboards)*/
+/* ================================================== */
+
+.gameboardContainer{
+    width: 90%;
+    height: 100%;
+    display: flex;
+
+    border-top: 2px solid white;
+    box-shadow: 2px solid black;
+}
+
+/* -------------------------------------------------- */
+/* Single GameBoard  - Declaration */
+/* --------------------------------------------------*/
+#gameboard{
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+
+    height: 100%;
+    width: 100%;
+}
+
+/* gameboard scorecard(container) */
+#gameboard #scoreCard{
+    height: 15%;
+    font-size: 25px;
+}
+
+/* gameboard  actual score  */
+#gameboard #score{
+    font-size: 25px;
+    padding-left: 10px;
+}
+
+/* gameboard text prompt */
+#gameboard #roll{
+    height: 10%;
+    font-size: 25px;
+
+}
+
+/* gameboard  container for dice iamge */
+#gameboard #container{
+    height: 60%;
+    align-self: center;
+    transform: translateX(0%);
+}
+/* -------------------------------------------*/
+/* action buttons*/
+/* -------------------------------------------*/
+
+.actionButtons{
+    width: 75%;
+    transform: translateX(0%);
+    align-self: center;
+    font-size: 15px;
+}
+/* roll dice actionbutton */
+.actionButtons #rollDice{
+    color:black;
+    border: 1px solid darkred;
+    margin-right: 10px;
+    padding: 10px;
+
+    cursor: pointer;
+}
+/* play again action button */
+.actionButtons #playAgain{
+    color: black;
+    border: 1px solid darkgreen;
+    margin-left: 20px;
+    padding: 10px;
+
+    cursor: pointer;
+}
+
+/* -------------------------------------------------- */
+/* Multi-player GameBoard Player 1 - Declaration */
+/* --------------------------------------------------*/
+
+#gameboardPlayer1{
+    display:flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+
+    height: 100%;
+    width:50%;
+
+    border-right: 2px solid white;
+}
+
+/* gameboard player 1 scorecard(container) */
+#gameboardPlayer1 #scoreCardPlayer1{
+    height: 15%;
+    font-size: 25px;
+}
+
+/* gameboard player 1 actual score  */
+#gameboardPlayer1 #scorePlayer1{
+    font-size: 25px;
+    padding-left: 10px;
+}
+
+/* gameboard player 1 - text prompt */
+#gameboardPlayer1 #rollPlayer1{
+    height: 10%;
+    font-size: 25px;
+
+}
+
+/* gameboard player 1 - container for dice iamge */
+#gameboardPlayer1 #containerPlayer1{
+    height: 60%;
+    align-self: center;
+    transform: translateX(0%);
+}
+
+/* gameboard player 1 - dice rolling image */
+
+
+/* -------------------------------------------*/
+/* action buttons player 1  */
+/* -------------------------------------------*/
+
+.actionButtonsPlayer1{
+    width: 75%;
+    transform: translateX(0%);
+    align-self: center;
+    font-size: 15px;
+}
+/* roll dice actionbutton */
+.actionButtonsPlayer1 #rollDicePlayer1{
+    color:black;
+    border: 1px solid darkred;
+    margin-right: 10px;
+    padding: 10px;
+
+    cursor: pointer;
+}
+/* play again action button */
+.actionButtonsPlayer1 #playAgainPlayer1{
+    color: black;
+    border: 1px solid darkgreen;
+    margin-left: 20px;
+    padding: 10px;
+
+    cursor: pointer;
+}
+
+/* ================================================== */
+/* GameBoard Player 2 - Declaration */
+/* ================================================== */
+
+#gameboardPlayer2{
+    display:flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+
+    height: 100%;
+    width:50%;
+
+    border-left: 2px solid white;
+}
+
+/* gameboard player 2 scorecard(container) */
+#gameboardPlayer2 #scoreCardPlayer2{
+    height: 15%;
+    font-size: 25px;
+}
+
+/* gameboard player 2 actual score  */
+#gameboardPlayer2 #scorePlayer2{
+    padding-left: 10px;
+    font-size: 25px;
+}
+
+/* gameboard player 2 - text prompt */
+#gameboardPlayer2 #rollPlayer2{
+    height: 10%;
+    font-size: 25px;
+}
+
+/* gameboard player 2 - container for dice iamge */
+#gameboardPlayer2 #containerPlayer2{
+    height: 60%;
+    align-self: center;
+    transform: translateX(0%);
+}
+
+/* gameboard player 2 - dice rolling image */
+
+
+/* ======================================================== */
+/* action buttons player 2  */
+/* ======================================================== */
+
+.actionButtonsPlayer2{
+    width: 75%;
+    transform: translateX(0%);
+    align-self: center;
+}
+/* roll dice actionbutton */
+.actionButtonsPlayer2 #rollDicePlayer2{
+    color: black;
+    border: 1px solid darkgreen;
+    margin-left: 20px;
+    padding: 10px;
+
+    cursor: pointer;
+}
+/* play again action button */
+.actionButtonsPlayer2 #playAgainPlayer2{
+    color: black;
+    border: 1px solid darkgreen;
+    margin-left: 20px;
+    padding: 10px;
+
+    cursor: pointer;
+}

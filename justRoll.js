@@ -19,8 +19,10 @@ const container = document.getElementById("container");
 const dice = document.getElementById ("dice");
 const actionButtons = document.querySelector(".actionButtons");
 const rollDice = document.getElementById("rollDice");
+const diceAudio = new Audio("diceroll.mp3");
 
 rollDice.addEventListener('click', () => {
+	diceAudio.play(); 
 	let currentRoll = Math.ceil(Math.random() * 6);
 
 	roll.style.display = "none";

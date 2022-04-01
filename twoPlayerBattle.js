@@ -12,7 +12,8 @@ const actionButtonsPlayer1 = document.querySelector(".actionButtonsPlayer1");
 const rollDicePlayer1 = document.getElementById("rollDicePlayer1");
 const playAgainPlayer1 = document.getElementById("playAgainPlayer1");
 const diceAudio = new Audio("diceroll.mp3");
-const winAudio = new Audio("victory.wav")
+const winAudio = new Audio("victory.wav");
+const lossAudio = new Audio("loss.wav");
 
 let player1Health = 20;
 
@@ -50,6 +51,7 @@ rollDicePlayer1.addEventListener('click', ()=> {
         playAgainPlayer1.style.backgroundColor = "#FFFFFF";
 
         scorePlayer2.textContent = `${player2Health} - You lost!`;
+        lossAudio.play();
         scorePlayer2.style.fontWeight = "bold";
         containerPlayer2.style.backgroundColor = "#AA0039";
         scoreCardPlayer2.style.backgroundColor = "#AA0039";
@@ -64,6 +66,7 @@ rollDicePlayer1.addEventListener('click', ()=> {
         
     } else {
         if (player1Health <= 0) {
+            lossAudio.play();
             scorePlayer1.textContent = `${player1Health} - You lost!`;
             scorePlayer1.style.fontWeight = "bold";
             containerPlayer1.style.backgroundColor = "#AA0039";
@@ -150,6 +153,7 @@ rollDicePlayer2.addEventListener('click', () => {
 		playAgainPlayer2.style.backgroundColor = "#FFFFFF";
 
 		scorePlayer1.textContent = `${player1Health} - You lost!`;
+        lossAudio.play();
 		scorePlayer1.style.fontWeight = "bold";
 		containerPlayer1.style.backgroundColor = "#AA0039";
 		scoreCardPlayer1.style.backgroundColor = "#AA0039";
@@ -164,6 +168,7 @@ rollDicePlayer2.addEventListener('click', () => {
 		
 	} else {
 		if (player2Health <= 0) {
+            lossAudio.play();
 			scorePlayer2.textContent = `${player2Health} - You lost!`;
 			scorePlayer2.style.fontWeight = "bold";
 			containerPlayer2.style.backgroundColor = "#AA0039";

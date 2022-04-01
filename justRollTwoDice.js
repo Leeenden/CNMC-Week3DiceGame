@@ -20,8 +20,10 @@ const dice1 = document.getElementById ("dice1");
 const dice2 = document.getElementById ("dice2");
 const actionButtons = document.querySelector(".actionButtons");
 const rollDice = document.getElementById("rollDice");
+const diceAudio = new Audio("diceroll.mp3");
 
 rollDice.addEventListener('click', () => {
+	diceAudio.play(); 
 	let currentRoll1 = Math.ceil(Math.random() * 6);
     let currentRoll2 = Math.ceil(Math.random() * 6);
 
@@ -33,7 +35,7 @@ rollDice.addEventListener('click', () => {
 	dice1.src = `images/${currentRoll1}Player1.png`;
     dice2.src = `images/${currentRoll2}Player2.png`;
 
-	score.textContent = currentRoll1, currentRoll2;
+	score.textContent = currentRoll1 + currentRoll2;
 
 	roll.style.display = "";
 	rollDice.style.display = "";

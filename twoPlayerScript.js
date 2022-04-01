@@ -11,10 +11,15 @@ const dicePlayer1 = document.getElementById ("dicePlayer1");
 const actionButtonsPlayer1 = document.querySelector(".actionButtonsPlayer1");
 const rollDicePlayer1 = document.getElementById("rollDicePlayer1");
 const playAgainPlayer1 = document.getElementById("playAgainPlayer1");
+const diceAudio = new Audio("diceroll.mp3");
+const winAudio = new Audio("victory.wav");
+const lossAudio = new Audio("loss.wav");
+
 
 let player1Total = 0;
 
 rollDicePlayer1.addEventListener('click', ()=> {
+	diceAudio.play(); 
 	let currentRoll = Math.ceil(Math.random() * 6);
 
 	rollPlayer1.style.display = "none";
@@ -44,6 +49,7 @@ rollDicePlayer1.addEventListener('click', ()=> {
 		playAgainPlayer1.style.backgroundColor = "#FFFFFF";
 
 		scorePlayer2.textContent = `${player2Total} - You lost!`;
+		lossAudio.play();
 		scorePlayer2.style.fontWeight = "bold";
 		containerPlayer2.style.backgroundColor = "#AA0039";
 		scoreCardPlayer2.style.backgroundColor = "#AA0039";
@@ -57,6 +63,7 @@ rollDicePlayer1.addEventListener('click', ()=> {
 		
 	} else {
 		if (currentRoll == 1) {
+			lossAudio.play();
 			scorePlayer1.textContent = `${player1Total} - You lost!`;
 			scorePlayer1.style.fontWeight = "bold";
 			containerPlayer1.style.backgroundColor = "#AA0039";
@@ -70,6 +77,7 @@ rollDicePlayer1.addEventListener('click', ()=> {
 			playAgainPlayer1.style.backgroundColor = "#FFFFFF";
 
 			scorePlayer2.textContent = `${player2Total} - Winner!`;
+			winAudio.play();
 			scorePlayer2.style.fontWeight = "bold";
 			dicePlayer2.style.backgroundColor = "#50C878";
 			scoreCardPlayer2.style.backgroundColor = "#50C878";
@@ -108,6 +116,7 @@ const playAgainPlayer2 = document.getElementById("playAgainPlayer2");
 let player2Total = 0;
 
 rollDicePlayer2.addEventListener('click', () => {
+	diceAudio.play(); 
 	let currentRoll = Math.ceil(Math.random() * 6);
 
 	rollPlayer2.style.display = "none";
@@ -123,6 +132,7 @@ rollDicePlayer2.addEventListener('click', () => {
 	rollPlayer1.style.display = "";
 
 	if (player2Total >= 20) {
+		lossAudio.play();
 		scorePlayer2.textContent = `${player2Total} - Winner!`;
 		scorePlayer2.style.fontWeight = "bold";
 		dicePlayer2.style.backgroundColor = "#50C878";
@@ -136,6 +146,7 @@ rollDicePlayer2.addEventListener('click', () => {
 		playAgainPlayer2.style.backgroundColor = "#FFFFFF";
 
 		scorePlayer1.textContent = `${player1Total} - You lost!`;
+		winAudio.play();
 		scorePlayer1.style.fontWeight = "bold";
 		containerPlayer1.style.backgroundColor = "#AA0039";
 		scoreCardPlayer1.style.backgroundColor = "#AA0039";
@@ -149,6 +160,7 @@ rollDicePlayer2.addEventListener('click', () => {
 		
 	} else {
 		if (currentRoll == 1) {
+			lossAudio.play();
 			scorePlayer2.textContent = `${player2Total} - You lost!`;
 			scorePlayer2.style.fontWeight = "bold";
 			containerPlayer2.style.backgroundColor = "#AA0039";
@@ -162,6 +174,7 @@ rollDicePlayer2.addEventListener('click', () => {
 			playAgainPlayer2.style.backgroundColor = "#FFFFFF";
 
 			scorePlayer1.textContent = `${player1Total} - Winner!`;
+			winAudio.play();
 			scorePlayer1.style.fontWeight = "bold";
 			dicePlayer1.style.backgroundColor = "#50C878";
 			scoreCardPlayer1.style.backgroundColor = "#50C878";

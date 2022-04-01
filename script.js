@@ -20,10 +20,14 @@ const dice = document.getElementById ("dice");
 const actionButtons = document.querySelector(".actionButtons");
 const rollDice = document.getElementById("rollDice");
 const playAgain = document.getElementById("playAgain");
+const diceAudio = new Audio("diceroll.mp3");
+const winAudio = new Audio("victory.wav");
+const lossAudio = new Audio("loss.wav");
 
 let playerTotal = 0;
 
 rollDice.addEventListener('click', () => {
+	diceAudio.play();
 	let currentRoll = Math.ceil(Math.random() * 6);
 
 	roll.style.display = "none";
@@ -40,6 +44,7 @@ rollDice.addEventListener('click', () => {
 	rollDice.style.display = "";
 
 	if (playerTotal >= 20) {
+		winAudio.play();
 		score.textContent = `${playerTotal} - You Won!`;
 		score.style.fontWeight = "bold";
 		dice.style.backgroundColor = "#50C878";
@@ -53,6 +58,7 @@ rollDice.addEventListener('click', () => {
 		playAgain.style.backgroundColor = "#FFFFFF";
 	} else {
 		if (currentRoll == 1) {
+			lossAudio.play();
 			score.textContent = `${playerTotal} - You lost!`;
 			score.style.fontWeight = "bold";
 			container.style.backgroundColor = "#AA0039";

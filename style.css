@@ -101,8 +101,9 @@
     border-radius: 25%;
     transition: border-radius ease-in-out 0.4s;
 }
-#indexPage:hover, #onePlayerGame:hover, #twoPlayerGame:hover{
+#indexPage:hover, #onePlayerGame:hover, #twoPlayerGame:hover {
     border-radius: 50%;
+    background-color: lightgreen;
 }
 
 /* pageHeader - ul declaration */
@@ -197,6 +198,7 @@
     padding: 10px;
     border: 2px solid black;
     border-radius: 25%;
+    transition: border-radius ease-in-out 0.4s;
     cursor: pointer;
 }
 /* play again action button */
@@ -206,7 +208,12 @@
     padding: 10px;
     border: 2px solid black;
     border-radius: 25%;
+    transition: border-radius ease-in-out 0.4s;
     cursor: pointer;
+}
+#playAgain:hover, #rollDice:hover {
+    border-radius: 50%;
+    background-color: lightgreen;
 }
 
 /* -------------------------------------------------- */
@@ -268,20 +275,27 @@
 /* roll dice actionbutton */
 .actionButtonsPlayer1 #rollDicePlayer1{
     color:black;
-    border: 1px solid darkred;
     margin-right: 10px;
     padding: 10px;
-
+    border: 2px solid black;
+    border-radius: 25%;
+    transition: border-radius ease-in-out 0.4s;
     cursor: pointer;
 }
 /* play again action button */
 .actionButtonsPlayer1 #playAgainPlayer1{
     color: black;
-    border: 1px solid darkgreen;
     margin-left: 20px;
     padding: 10px;
-
+    border: 2px solid black;
+    border-radius: 25%;
+    transition: border-radius ease-in-out 0.4s;
     cursor: pointer;
+}
+
+#playAgainPlayer1:hover, #rollDicePlayer1:hover {
+    border-radius: 50%;
+    background-color: lightgreen;
 }
 
 /* ================================================== */
@@ -341,18 +355,28 @@
 /* roll dice actionbutton */
 .actionButtonsPlayer2 #rollDicePlayer2{
     color: black;
-    border: 1px solid darkgreen;
     margin-left: 20px;
     padding: 10px;
+    border: 2px solid black;
+    border-radius: 25%;
+    transition: border-radius ease-in-out 0.4s;
+    cursor: pointer;
 
     cursor: pointer;
 }
 /* play again action button */
 .actionButtonsPlayer2 #playAgainPlayer2{
     color: black;
-    border: 1px solid darkgreen;
     margin-left: 20px;
     padding: 10px;
+    border: 2px solid black;
+    border-radius: 25%;
+    transition: border-radius ease-in-out 0.4s;
+    cursor: pointer;
 
     cursor: pointer;
+}
+#playAgainPlayer2:hover, #rollDicePlayer2:hover {
+    border-radius: 50%;
+    background-color: lightgreen;
 }

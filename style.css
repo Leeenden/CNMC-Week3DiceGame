@@ -7,6 +7,10 @@
     font-family: 'Orbitron', 'Sans-serif';
     color: black;
 }
+
+* a:link {
+    text-decoration: none;
+}
 /* ==================================================== */
 /* main page container Declaration */
 /* ==================================================== */
@@ -79,6 +83,7 @@
     align-content: space-between;
     cursor: pointer;
 }
+
 
 #indexPage{
     width: 20%;
